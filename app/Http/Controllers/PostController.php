@@ -54,8 +54,5 @@ class PostController extends Controller
 
     }
 
-function aa(){
-        return 2344;
-}
-
+aaaaaaaaaaaaaaaaaaaaaaa
 }
