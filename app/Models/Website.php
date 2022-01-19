@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Website extends Model
 {
+
     use HasFactory;
 
     protected $table = 'websites';
@@ -15,8 +16,9 @@ class Website extends Model
         'name'
     ];
 
-    function subscriptors(){
-        return $this->hasMany(Subscriptor::class);
+    public function subscribers()
+    {
+        return $this->hasMany(Subscriber::class);
     }
 
 }

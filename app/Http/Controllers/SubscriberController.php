@@ -2,38 +2,37 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Subscriptor;
-use App\Models\Website;
+use App\Models\Subscriber;
 use Illuminate\Http\Request;
 
 
-class SubscriptorController extends Controller
+class SubscriberController extends Controller
 {
-    function subscripe(Request $request)
+   public function subscribe(Request $request)
     {
         $request->validate([
-            "email" => 'required|unique:subscriptors|email',
+            "email" => 'required|unique:subscribers|email',
             "website_id" => "required|numeric"
         ]);
-        Subscriptor::create([
+        Subscriber::create([
             'email' => $request->email,
             'website_id' => $request->website_id
         ]);
     }
     //update
-    function update(Request $request){
+    public function update(Request $request){
             $request->validate([
                "current_email" => "required|email"
             ]);
-            Subscriptor::where("email", $request->current_email)->update([
+            Subscriber::where("email", $request->current_email)->update([
                 "email" => $request->new_email
             ]);
             return "OK";
 
         }
     //delete
-    function unsubscripe($email){
-        Subscriptor::where("email", $email)->delete();
+    public function unSubscribe($email){
+        Subscriber::where("email", $email)->delete();
     }
 
 }

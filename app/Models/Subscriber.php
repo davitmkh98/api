@@ -5,18 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Subscriptor extends Model
+class Subscriber extends Model
 {
     use HasFactory;
 
-    protected $table = 'subscriptors';
+    protected $table = 'subscribers';
 
     protected $fillable = [
         'email',
         'website_id'
     ];
-
-
 
 
 }

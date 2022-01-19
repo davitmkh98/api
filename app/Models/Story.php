@@ -14,6 +14,6 @@ class Story extends Model
         'title',
         'image',
         'website_id'
-     ];
+    ];
 
 }
