@@ -54,5 +54,4 @@ class PostController extends Controller
 
     }
 
-aaaaaaaaaaaaaaaaaaaaaaa
 }
