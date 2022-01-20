@@ -35,5 +35,7 @@ Route::post("update", [\App\Http\Controllers\SubscriberController::class, "updat
 //delete subscription
 Route::get("unsubscribe/{email}", [\App\Http\Controllers\SubscriberController::class, 'unSubscribe']);
 
+Route::get("test", [\App\Http\Controllers\PostController::class, 'test']);
 
 
+Route::post('queue', [\App\Http\Controllers\ExampleController::class, 'queue']);

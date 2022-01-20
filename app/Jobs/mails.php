@@ -20,7 +20,8 @@ class mails implements ShouldQueue
      */
     public function __construct()
     {
-        //
+       //
+       $this->message = "ok";
     }
 
     /**
@@ -31,5 +32,6 @@ class mails implements ShouldQueue
     public function handle()
     {
         //
+
     }
 }
